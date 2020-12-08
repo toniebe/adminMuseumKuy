@@ -5,7 +5,7 @@ import add from '../assets/images/add.png'
 import edit from '../assets/images/edit.png'
 import view from '../assets/images/view.png'
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.top}>
@@ -20,17 +20,17 @@ const HomeScreen = () => {
             </View>
             <View style={styles.bottom}>
                 <View style={styles.buttonContiner}>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('InputData') }>
                         <Image  source={add} style={{width:40,height:40,marginLeft:20}} />
                         <Text style={styles.font}>Input Data</Text>
                     </TouchableOpacity>
                     
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} >
                         <Image  source={view} style={{width:40,height:40,marginLeft:20}} />
                         <Text style={styles.font}>View Data</Text>
                     </TouchableOpacity>
                     
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('EditData') } >
                         <Image  source={edit} style={{width:35,height:35,marginLeft:20}} />
                         <Text style={styles.font}>Edit Data</Text>
                     </TouchableOpacity>

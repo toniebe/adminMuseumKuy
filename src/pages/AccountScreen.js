@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import fotoProfile from '../assets/images/mariavania.jpeg'
+import fotoProfile from '../assets/images/jamet.jpeg'
 import IconAccount from '../components/IconAccount'
 import editIcon from '../assets/logo/edit.png'
 import logoutIcon from '../assets/logo/logout.png'
@@ -15,9 +15,9 @@ const AccountScreen = ({navigation}) => {
             </ImageBackground>
             <View  style={styles.dataProfile}>
                 <View style={styles.fontContainer}>
-                    <Text style={styles.fontName}>Maria</Text>
-                    <Text style={styles.fontName}>Vania</Text>
-                    <Text style={styles.fontEmail}>Mariauwuw@gmail.com</Text>
+                    <Text style={styles.fontName}>Uchia</Text>
+                    <Text style={styles.fontName}>Udin</Text>
+                    <Text style={styles.fontEmail}>UchiaUdin@gmail.com</Text>
                 </View>
                 <View style={styles.iconContainer}>
                     <TouchableOpacity onPress={() => navigation.navigate('UpdateProfile')}>

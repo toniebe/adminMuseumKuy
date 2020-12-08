@@ -12,6 +12,12 @@ import AccountScreen from '../pages/AccountScreen'
 import ChangePasswordScreen from '../pages/ChangePasswordScreen'
 import UpdateProfileScreen from '../pages/UpdateProfileScreen'
 
+import InputScreen from '../pages/InputScreen'
+import EditScreen from '../pages/EditScreen'
+
+import SuccessScreen from '../pages/SuccessScreen'
+
+
 import iconHome from '../assets/images/home.png'
 import iconTransaksi from '../assets/images/transfer.png'
 import iconAccount from '../assets/images/user.png'
@@ -90,7 +96,12 @@ const Route = () => {
               fontWeight: 'bold',
             },
           }}/>
+        
+          <Stack.Screen name="InputData" component={InputScreen} options={{ headerShown: false }}/>
+          <Stack.Screen name="EditData" component={EditScreen} options={{ headerShown: false }}/>
+          <Stack.Screen name="Success" component={SuccessScreen} options={{ headerShown: false }}/>
         </Stack.Navigator>
+        
     )
 }
 
