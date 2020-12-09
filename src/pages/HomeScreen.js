@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
                         <Text style={styles.font}>Input Data</Text>
                     </TouchableOpacity>
                     
-                    <TouchableOpacity style={styles.button} >
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ViewData')} >
                         <Image  source={view} style={{width:40,height:40,marginLeft:20}} />
                         <Text style={styles.font}>View Data</Text>
                     </TouchableOpacity>

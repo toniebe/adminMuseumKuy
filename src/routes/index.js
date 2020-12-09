@@ -14,6 +14,7 @@ import UpdateProfileScreen from '../pages/UpdateProfileScreen'
 
 import InputScreen from '../pages/InputScreen'
 import EditScreen from '../pages/EditScreen'
+import ViewScreen from '../pages/ViewScreen'
 
 import SuccessScreen from '../pages/SuccessScreen'
 
@@ -99,6 +100,7 @@ const Route = () => {
         
           <Stack.Screen name="InputData" component={InputScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="EditData" component={EditScreen} options={{ headerShown: false }}/>
+          <Stack.Screen name="ViewData" component={ViewScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="Success" component={SuccessScreen} options={{ headerShown: false }}/>
         </Stack.Navigator>
         
