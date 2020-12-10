@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     backImage:{
         width:20,
         height:20,
-        
     },
     bottom:{
         flex:2,

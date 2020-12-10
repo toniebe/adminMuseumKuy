@@ -17,6 +17,7 @@ import EditScreen from '../pages/EditScreen'
 import ViewScreen from '../pages/ViewScreen'
 
 import SuccessScreen from '../pages/SuccessScreen'
+import AcceptScreen from '../pages/AcceptScreen'
 
 
 import iconHome from '../assets/images/home.png'
@@ -102,6 +103,7 @@ const Route = () => {
           <Stack.Screen name="EditData" component={EditScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="ViewData" component={ViewScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="Success" component={SuccessScreen} options={{ headerShown: false }}/>
+          <Stack.Screen name="Accept" component={AcceptScreen} options={{ headerShown: false }}/>
         </Stack.Navigator>
         
     )
