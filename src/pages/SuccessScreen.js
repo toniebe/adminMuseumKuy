@@ -10,7 +10,7 @@ const SuccessScreen = ({navigation}) => {
             </View>
             <View style={styles.bottom}>
                 <View style={styles.textContainer}>
-                    <Text style={styles.fontPurchase}>Success Adding Data</Text>
+                    <Text style={styles.fontPurchase}>Berhasil ubah data</Text>
                     <Text style={styles.fontMessage}>Art 1 : New Museum</Text>
                     <Text style={styles.fontMessage}>Jl. Rajawali Selatan Raya No.3, RT.4/RW.6, Gn. Sahari Utara</Text>
                     <Text style={styles.fontMessage}>Rp. 75000</Text>

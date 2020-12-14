@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import userPhoto from '../assets/images/mariavania.jpeg'
 
-const CardUser = () => {
+const CardUser = ({status}) => {
     return (
         <View style={styles.container}>
             <View style={styles.imageContainer}>
@@ -14,7 +14,14 @@ const CardUser = () => {
             </View>
 
             <View style={styles.statusContainer}>
-                <Text style={styles.fontStatus}>Pending</Text>
+                {
+                    status == "Pending" ? (
+                        <Text style={styles.fontStatus}>{status}</Text>
+                    ): (
+                        <Text style={styles.fontLain}>{status}</Text>
+                    )
+                }
+                
             </View>
         </View>
     )
@@ -58,7 +65,13 @@ const styles = StyleSheet.create({
     },
     fontStatus:{
         color:'#CFC706',
-        fontSize:14,
+        fontSize:12,
+        marginTop:10,
+        marginRight:10
+    },
+    fontLain:{
+        color:'green',
+        fontSize:10,
         marginTop:10,
         marginRight:10
     }

@@ -1,17 +1,17 @@
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import * as Animatable from 'react-native-animatable'
-import gambarTransaksi from '../assets/images/MenuTransaksi.png'
+import gambarTransaksi from '../assets/images/kunjungan.png'
 import CardPembelian from '../components/CardPembelian'
 
-const AcceptScreen = ({navigation}) => {
+const AcceptKunjunganScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Animatable.View 
             animation="fadeInDownBig"
             style={styles.containerTop}>
                 <Image style={{width: 242, height:171}} source={gambarTransaksi}/>
-                <Text style={styles.title}> Purchase Ticket </Text>
+                <Text style={styles.title}> Status Kunjungan </Text>
             </Animatable.View>
             <Animatable.View 
             animation="fadeInUpBig"
@@ -21,10 +21,10 @@ const AcceptScreen = ({navigation}) => {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HistoryTicket')} >
-                        <Text style={styles.fontButton} >Tolak</Text>
+                        <Text style={styles.fontButton} >Belum</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HistoryTicket')} >
-                        <Text style={styles.fontButton} >Terima</Text>
+                        <Text style={styles.fontButton} >Sudah</Text>
                     </TouchableOpacity>
                 </View>
             </Animatable.View>
@@ -32,7 +32,7 @@ const AcceptScreen = ({navigation}) => {
     )
 }
 
-export default AcceptScreen
+export default AcceptKunjunganScreen
 
 const styles = StyleSheet.create({
     container:{

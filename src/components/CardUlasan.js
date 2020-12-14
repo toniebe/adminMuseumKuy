@@ -26,8 +26,7 @@ export default CardUlasan
 const styles = StyleSheet.create({
     container:{
         backgroundColor:'white',
-        marginVertical:60,
-        marginLeft:20,
+        marginHorizontal:10,
         flexDirection:'row',
         shadowColor: "#000",
         shadowOffset: {
