@@ -45,12 +45,13 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     userContainer:{
-        flexDirection:'row'
+        flexDirection:'row',
     },
     imageUser:{
-        width:100,
-        height:100,
-        borderRadius:50
+        width:50,
+        height:50,
+        borderRadius:50,
+        marginTop:20
     },
     fontContainer:{
         marginTop:20,

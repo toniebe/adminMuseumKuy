@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import searchLogo from '../assets/logo/loupe.png'
 import filterLogo from '../assets/images/filter.png'
 
-const Header = () => {
+const Header = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.inputContainer}>
@@ -15,7 +15,7 @@ const Header = () => {
                     <Image source={searchLogo} style={styles.image} />
             </TouchableOpacity>
             <View style={styles.filterContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Filter')}>
                     <Image source={filterLogo} style={styles.imageFilter} />
                 </TouchableOpacity>
             </View>

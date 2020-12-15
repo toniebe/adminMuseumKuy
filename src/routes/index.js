@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -26,10 +26,15 @@ import ViewScreen from '../pages/ViewScreen'
 import SuccessScreen from '../pages/SuccessScreen'
 import AcceptScreen from '../pages/AcceptScreen'
 
+import FilterScreen from '../pages/FilterScreen'
 
 import iconHome from '../assets/images/home.png'
 import iconTransaksi from '../assets/images/transfer.png'
 import iconAccount from '../assets/images/user.png'
+import searchLogo from '../assets/logo/loupe.png'
+import filterLogo from '../assets/images/filter.png'
+
+
 import Header from '../components/Header'
 
 
@@ -47,12 +52,27 @@ const IconBottom = (props) => {
     )
   }
 
-  const Ticket = () => {
+  const Ticket = ({navigation}) => {
     return(
       <View 
       
       style={styles.container}>
-          <Header />
+          {/* <Header /> */}
+
+          <View style={styles.containerHeader}>
+            <View style={styles.inputContainer}>
+                <TextInput placeholder="search" style={styles.textInput} />
+            </View>
+
+            <TouchableOpacity style={styles.imageContainer}>
+                    <Image source={searchLogo} style={styles.image} />
+            </TouchableOpacity>
+            <View style={styles.filterContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate('Filter')}>
+                    <Image source={filterLogo} style={styles.imageFilter} />
+                </TouchableOpacity>
+            </View>
+          </View>
 
 
           <TabTop.Navigator swipeEnabled={true} tabBarOptions={{
@@ -63,13 +83,6 @@ const IconBottom = (props) => {
               justifyContent: "center",
               alignItems: "center",
             },
-            style:{
-              // borderTopLeftRadius:20,
-              // borderTopRightRadius:20,
-              // marginTop:30,
-              // borderWidth: 1,
-  
-            }
             
           }} >
             <Tab.Screen name="Transaksi Pending" component={TicketPendingScreen} />
@@ -153,6 +166,18 @@ const Route = () => {
           <Stack.Screen name="Success" component={SuccessScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="Accept" component={AcceptScreen} options={{ headerShown: false }}/>
           <Stack.Screen name="AcceptKunjungan" component={AcceptKunjungan} options={{ headerShown: false }}/>
+
+          <Stack.Screen name="Filter" component={FilterScreen} options={{
+            title: '',
+            headerStyle: {
+              backgroundColor: '#fff',
+            },
+            headerTintColor: '#A01F1F',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}/>
+
         </Stack.Navigator>
         
     )
@@ -167,5 +192,41 @@ const styles = StyleSheet.create({
   },
   header:{
     paddingHorizontal:20,
+  },
+  containerHeader:{
+    marginTop:10,
+    backgroundColor:'white',
+    paddingHorizontal:20,
+    paddingTop:5,
+    flexDirection:'row'
+  },
+  inputContainer:{
+      flex:7,
+  },
+  textInput:{
+      borderWidth:1,
+      borderColor:'#C4C4C4',
+      borderTopLeftRadius:20,
+      borderBottomLeftRadius:20,
+  },
+  imageContainer:{
+      flex:1,
+      paddingHorizontal:20,
+      justifyContent:'center',
+      alignItems:'center',
+      backgroundColor:'#A01F1F'
+  },
+  image:{
+      width:20,
+      height:20
+  },
+  filterContainer:{
+      marginLeft:20,
+      justifyContent:'center',
+      alignItems:'center'
+  },
+  imageFilter:{
+      width:30,
+      height:30
   }
 })

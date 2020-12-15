@@ -14,7 +14,6 @@ const HomeScreen = ({navigation}) => {
             <View style={styles.top}>
                 <View style={styles.fontContainer}>
                     <Text style={styles.fontUser}>Hi, User</Text>
-                    <Text style={styles.fontWelcome}>Selamat datang di Museum Kuy</Text>
                     <Text style={styles.fontPromote}>Mari kelola Museum Anda</Text>
                 </View>
                 <View style={styles.userContainer}>
@@ -74,14 +73,15 @@ const styles = StyleSheet.create({
     fontContainer:{
         flex:1,
         marginLeft:20,
-        marginTop:60
+        marginVertical:20,
+        justifyContent:'center'
     },
     fontUser:{
         fontSize:16,
         color:'white',
     },
     fontWelcome:{
-        fontSize:20,
+        fontSize:18,
         fontWeight:'bold',
         color:'white',
         fontFamily:'Roboto'
@@ -92,8 +92,9 @@ const styles = StyleSheet.create({
         color:'white'
     },
     userContainer:{
-        marginTop:60,
-        marginRight:40
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center'
     },
     descriptionContainer:{
         marginHorizontal:20,
@@ -127,8 +128,9 @@ const styles = StyleSheet.create({
     },
     ulasan:{
         flex:1,
-        marginVertical:10,
-        marginHorizontal:10
+        marginVertical:20,
+        marginHorizontal:10,
+        height:'100%'
         // backgroundColor:'green'
     }
 
